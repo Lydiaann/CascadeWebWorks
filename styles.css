@@ -4,48 +4,62 @@
 /* #986293	(152,98,147) Nude Purple */
 /* #b04153	(176,65,83) Coral */
 /* #8d2d48	(141,45,72) Deep red */
+
+* {
+  box-sizing: border-box;
+}
 html {
-  /* background-image: url("images/mtn.jpg"); */
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* background-image: url("images/code.jpg"); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
   height: 100%;
   margin: 0;
   font-family:"Segoe UI";
+
 }
 
-body {
-  /* background-color: rgba(255, 255, 255, 0.571); */
+ body {
+
+  background-color: rgb(15, 34, 49);
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   min-height: 100vh;
-  flex: 1;
-  overflow-x: hidden; 
-  box-sizing: border-box;
-  max-width: 1080px; /* Or a percentage like 80% */
-  margin: 0 auto; /* Centers the container horizontally */
+  margin: 0;
+  overflow-x: hidden;
+ }
+
+ .page-wrapper {
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 /* ---------------------LOGO-------------------------- */
-.logo-img {
-  width: 10%;
-  height: auto;
-  float: left;
+.logo {
+  margin-top: 4.8em;
 }
 
 /* -------------------NAVIGATION--------------------- */
-.desktop-nav, footer {
-  display: inline-flex;
-  justify-content: center;
+footer {
+  background-color: #333;
+  color: white;
   width: 100%;
-  /* position: sticky; */
-  /* top: 0; */
-  z-index: 1000; 
-  /* justify-content: space-evenly;  */
-  text-align: center;
-  /* height: 50px; */
-  float: right;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.desktop-nav {
+  overflow: hidden;
+  background-color: #333;
+  padding: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: -20px;
 }
 
 .mobile-nav {
@@ -55,14 +69,16 @@ body {
 /* ---------------------LINKS ----------------------- */
 
 .desktop-nav-link {
-  color: #0c10cb;
-  border: 3px solid;
+  color: #000000;
+  /* border: 3px solid; */
   border-radius: 10px;
-  padding: 20px;
-  background-color: #3e3e3e42;
+  padding: 14px;
+  background-color: #ffffff;
   margin-left: 5px;
   margin-top: 10px;
   font-size: 1rem;
+  /* float: right; */
+  text-decoration: none;
 }
 
 .desktop-nav-link:hover {
@@ -73,8 +89,12 @@ body {
 
 
 /* ------------------FOOTER------------------------------- */
-footer {
+/* footer {
   height: 80px;
+} */
+
+.credits {
+  color: white;
 }
 
 /* ------------------HERO SECTION --------------------- */
@@ -83,154 +103,113 @@ footer {
   justify-content: center;
   text-align: center;
 }
-
-/* -----------------------TABLE LAYOUT------------------------ */
+.logo {
+  width: 600px;
+  height: auto;
+}
+.companyname{
+  font-size: 4.5em;
+  color: white;
+}
+.slogan {
+  font-size: 2.2em;
+  color: white;
+  font-weight: 100;
+  margin-top: 0;
+}
 
 .intro {
   font-size: 1rem;
   text-align: center;
-  background-color: #ffffff49;
+  background-color: #ffffffc0;
   border-radius: 15px;
+  padding: 5px;
 }
 
 /*---------------------- NAVIGATION----------------------- */
-@media (max-width: 1080px){
+/* ================= MOBILE & TABLET ================= */
+@media (max-width: 1080px) {
 
-html, body {
-    overflow-x: hidden; 
-    box-sizing: border-box;
-    max-width: 85%; /* Or a percentage like 80% */
-    margin: 0 auto; /* Centers the container horizontally */
-}
+  .companyname {
+    font-size: 3em;
+  }
+
+  .slogan {
+    font-size: 2em;
+  }
+
+  /* Navigation */
+  .desktop-nav {
+    display: none;
+  }
+
   .mobile-nav {
     position: fixed;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     padding: 15px;
-    top: 0; /* Aligns the top edge of the element with the top of the viewport */
-    left: 0; /* Optional: Aligns the left edge */
-    width: 100%; /* Optional: Makes it span the full width */
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 100;
   }
-  .desktop-nav {
+
+  #menu-toggle {
     display: none;
   }
-  #menu-toggle { 
-    display: none; 
-  }
+
   .hamburger {
     font-size: 28px;
-    color: var(--white);
+    color: white;
     cursor: pointer;
-    z-index: 2;
     user-select: none;
     padding: 8px 10px;
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
   }
+
   .mobile-nav-links {
     display: none;
     flex-direction: column;
     position: absolute;
     top: 100%;
-    left: 10px;
-    /* padding: 10px; */
-    /* border-radius: 8px; */
-    width: 30vw;
-    /* z-index: 1; */
+    left: 15px;
+    width: 200px;
   }
+
   .mobile-nav-links a {
-    color: #0c10cb;
-    text-align: left;
-    font-size: 26px;
-    display: block;
-    border-radius: 4px;
-    text-decoration: none;
     background: #ffffff;
-    width: 180px;
-    padding: 5px;
+    color: #0c10cb;
+    font-size: 22px;
+    padding: 8px;
+    text-decoration: none;
+  }
+
+  #menu-toggle:checked ~ .mobile-nav-links {
+    display: flex;
   }
 
   .intro {
-    font-size: 2vw;
-  }
-
-
-  #menu-toggle:checked ~ .mobile-nav-links { 
-    display: flex; 
-  }
-  #menu-toggle:checked + .hamburger {
-    background: rgba(255,255,255,0.03);
-    border-radius: 6px;
-  }
-
-@media (max-width: 360px){
-  .nav {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 15px;
-    top: 0; /* Aligns the top edge of the element with the top of the viewport */
-    left: 0; /* Optional: Aligns the left edge */
-    width: 100%; /* Optional: Makes it span the full width */
-    z-index: 100;
-
-  }
-
-  #menu-toggle { 
-    display: none; 
-  }
-  .hamburger {
-    font-size: 28px;
-    color: var(--white);
-    cursor: pointer;
-    z-index: 2;
-    user-select: none;
-    padding: 8px 10px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 10px;
-    width: 30vw;
-  }
-  .nav-links a {
-    color: var(--white);
-    text-align: left;
-    font-size: 20px;
-    display: block;
-    border-radius: 4px;
-    text-decoration: none;
-    background: rgb(169, 182, 250);
-    
-  }
-  #menu-toggle:checked ~ .nav-links { 
-    display: flex; 
-  }
-  #menu-toggle:checked + .hamburger {
-    background: rgba(255,255,255,0.03);
-    border-radius: 6px;
-  }
-
-  a {
-    color: #fbebfb;
-    text-decoration: none;
-    /* border: 2px solid; */
-    border-radius: 10px;
-    padding: 10px;
-    margin-left: 10px;
-    background-color: rgb(169, 182, 250);
-  }
-  a:hover {
-    transform: scale(1.1);
+    font-size: 1rem;
   }
 }
+
+/* ================= SMALL PHONES ================= */
+@media (max-width: 360px) {
+
+  .companyname {
+    font-size: 2.2em;
+  }
+
+  .slogan {
+    font-size: 1.6em;
+  }
+
+  .mobile-nav-links a {
+    font-size: 18px;
+    width: 160px;
+  }
+
+  .intro {
+    font-size: 0.9rem;
+  }
 }
