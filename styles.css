@@ -19,8 +19,10 @@
 }
   main {
     padding-top: 120px; /* adjust if needed */
+    flex: 1;
   }
- body {
+
+  body {
     background-color: rgb(15, 34, 49);
     display: flex;
     flex-direction: column;
@@ -50,15 +52,7 @@ width: auto;
   display: block;
 }
 /* -------------------NAVIGATION--------------------- */
-footer {
-  background-color: #333;
-  color: white;
-  width: 100%;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;  
-}
+
 
 .desktop-nav {
   position: fixed;
@@ -103,13 +97,20 @@ min-height: 90px;      /* 👈 key fix */
 
 
 /* ------------------FOOTER------------------------------- */
-/* footer {
-  height: 80px;
-} */
+footer {
+  background-color: #333;
+  color: white;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .credits {
   color: white;
 }
+
 
 /* ------------------HERO SECTION --------------------- */
 .hero-section {
@@ -140,7 +141,31 @@ min-height: 90px;      /* 👈 key fix */
   padding: 5px;
 }
 
+.contact-intro {
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+
+/* --------------------- CONTACT PAGE -------------------- */
+.contact-intro {
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 15px;
+  padding: 5px;
+}
+.contact-img {
+  max-width: 200px;
+  border-radius: 50%;
+margin-left: auto;
+margin-right: auto;
+}
+
+
 /*---------------------- NAVIGATION----------------------- */
+
 /* ================= MOBILE & TABLET ================= */
 @media (max-width: 1080px) {
 
