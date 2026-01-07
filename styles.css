@@ -119,6 +119,7 @@ footer {
 }
 .laptop-img {
   float: inline-end;
+  border-radius: 15px;
 }
 
 .logo {
@@ -136,7 +137,7 @@ footer {
   font-weight: 100;
   margin-top: 0;
 }
-
+ /* ---------------------- INTROS ------------------------ */
 .intro {
   font-size: 1rem;
   text-align: center;
@@ -178,7 +179,7 @@ footer {
   max-width: 400px;
   width: 100%;
   height: auto;
-  /* margin-top: 15px; */
+
   border-radius: 15px;
   margin-bottom: 120px;
 }
@@ -195,6 +196,37 @@ footer {
   border-radius: 50%;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* -------------------------ABOUT PAGE ---------------------- */
+.about {
+  color: white;
+  font-size: 3.5rem;
+}
+.about-img-pinecone {
+  max-width: 400px;
+  height: auto;
+  width: 100%;
+  border-radius: 15px;
+  float: left;
+  margin-right: 24px;
+  margin-bottom: 16px;
+}
+.intro-about {
+  text-align: start;
+  padding: 15px;
+  color: white;
+  /* border: 2px solid white; */
+  border-radius: 15px;
+  line-height: 1.8;
+}
+
+.pinecone-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  margin: 0 auto;
 }
 
 
@@ -274,7 +306,7 @@ footer {
     color: #ffffff;
     padding: 12px 16px;
     /* border-radius: 12px; */
-    font-size: 2.1rem;
+    font-size: 1.1rem;
   }
 
   .mountain-wrapper {
