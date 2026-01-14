@@ -282,6 +282,7 @@ footer {
 .thumbnail {
   height: 200px;
   cursor: pointer;
+  margin: 30px;
 }
 
 #overlay {
@@ -502,6 +503,12 @@ textarea{
   .hero-section {
     margin-top: 1rem;
   }
+
+  .thumbnail {
+    display: block;
+    margin: 0 auto;
+  }
+
 }
 @media (max-width: 550px) {
   .intro-right-column {
