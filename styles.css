@@ -513,6 +513,10 @@ textarea{
     display: block;
     margin: 0 auto;
   }
+  @media (max-width: 1080px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
 
 }
 @media (max-width: 550px) {
