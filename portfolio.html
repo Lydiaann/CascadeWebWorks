@@ -41,13 +41,14 @@
     <div class="portfolio-wrapper">
       <div class="portfolio">SAMPLES</div>
       <h1 class="intro-portfolio">(Click to expand)</h1>
-      <img
-        src="images/Sample1.png" data-large="images/Sample1-large.png" class="thumbnail" alt="click to expand" onclick="expandImg(this)">
-      <div id="overlay" onclick="off()">
-        <img id="expanded-img-content" alt="expanded image">
+      <div class="portfolio-grid">
+        <img src="images/Sample1.png" data-large="images/Sample1-large.png" class="thumbnail" alt="click to expand" onclick="expandImg(this)">
+        <img src="images/Sample2.jpg" data-large="images/Sample2-large.png" class="thumbnail" alt="click to expand" onclick="expandImg(this)">
+        <img src="images/Sample3.jpg" data-large="images/Sample3-large.png" class="thumbnail" alt="click to expand" onclick="expandImg(this)">
       </div>
-
-      
+    </div>
+    <div id="overlay" onclick="off()">
+      <img id="expanded-img-content" alt="expanded image">
     </div>
   </main>
 

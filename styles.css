@@ -260,7 +260,12 @@ footer {
   /* font-size: 1.3rem; */
 }
 /* ------------------ PORTFOLIO PAGE -------------------  */
-
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
 .portfolio-wrapper {
   position: relative;
   width: 100%;
