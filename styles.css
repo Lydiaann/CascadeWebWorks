@@ -200,7 +200,9 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
-
+option {
+  background-color: black;
+}
 /* -------------------------ABOUT PAGE ---------------------- */
 .about {
   color: white;
@@ -380,7 +382,7 @@ textarea{
 
 .send-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(4, 255, 113, 0.4);
+  box-shadow: 0 10px 20px rgba(120, 93, 10, 0.4);
 }
 
 @media (min-width: 1080px) {
@@ -513,7 +515,6 @@ textarea{
     display: block;
     margin: 0 auto;
   }
-  @media (max-width: 1080px) {
   .portfolio-grid {
     grid-template-columns: 1fr;
   }
