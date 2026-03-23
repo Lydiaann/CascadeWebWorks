@@ -148,16 +148,24 @@ footer {
   border-radius: 15px;
   padding: 5px;
 }
+.intro2 {
+  font-size: 1.0rem;
+  text-align: start;
+
+  border-radius: 15px;
+  padding: 5px;
+}
 
 .intro-right-column {
   text-align: start;
   padding: 15px;
   color: white;
-  border: 2px solid white;
+  /* border: 2px solid white; */
   border-radius: 15px;
-  max-width: 50%;
+  max-width: 60%;
   margin-left: auto;
-  line-height: 1.8;
+  line-height: 1.5;
+  font-size: 1rem;
 }
 
 .mountain-wrapper {
@@ -386,7 +394,7 @@ textarea{
 }
 
 @media (min-width: 1080px) {
-    .mobile-logo {
+  .mobile-logo {
     display: none;
   }
   
@@ -520,11 +528,30 @@ textarea{
   }
 
 }
-@media (max-width: 550px) {
-  .intro-right-column {
-    font-size: 1.2rem;
+
+  .intro {
+    flex-direction: column;
+    text-align: center;
   }
 
+@media (max-width: 768px) {
+.intro {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .intro-right-column {
+    position: static;   /* 🔑 THIS FIXES THE OVERFLOW */
+    transform: none;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .mtns-img {
+    display: none;
+
+  }
 }
 
 @media (max-width: 480px) {
@@ -536,6 +563,8 @@ textarea{
   .form-header {
     font-size: 1.6rem;
   }
+
+
 }
 
 
