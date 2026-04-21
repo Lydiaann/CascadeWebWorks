@@ -46,3 +46,4 @@ public String handleForm(
 
     return "redirect:/contact.html";
 }
+}
